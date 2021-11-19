@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="org.no_ip.payan.metro3" platformBuildVersionCode="25" platformBuildVersionName="7.1.1">
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="25"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.nfc" android:required="true"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:debuggable="true" android:allowBackup="true" android:supportsRtl="true">
+        <activity android:theme="@style/AppTheme.NoActionBar" android:label="@string/app_name" android:name="org.no_ip.payan.metro3.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED"/>
+            </intent-filter>
+            <meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@xml/nfc_tech_filter"/>
+        </activity>
+        <activity android:name="org.no_ip.payan.metro3.nuevaTarjeta"/>
+        <activity android:name="org.no_ip.payan.metro3.leerTarjeta"/>
+        <activity android:theme="@style/AppTheme.NoActionBar" android:label="@string/title_activity_datos_tarjeta" android:name="org.no_ip.payan.metro3.datosTarjeta"/>
+    </application>
+</manifest>

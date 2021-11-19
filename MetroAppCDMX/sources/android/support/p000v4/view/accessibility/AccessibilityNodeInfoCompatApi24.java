@@ -1,0 +1,33 @@
+package android.support.p000v4.view.accessibility;
+
+import android.annotation.TargetApi;
+import android.support.annotation.RequiresApi;
+import android.view.accessibility.AccessibilityNodeInfo;
+
+@TargetApi(24)
+@RequiresApi(24)
+/* renamed from: android.support.v4.view.accessibility.AccessibilityNodeInfoCompatApi24 */
+class AccessibilityNodeInfoCompatApi24 {
+    AccessibilityNodeInfoCompatApi24() {
+    }
+
+    public static Object getActionSetProgress() {
+        return AccessibilityNodeInfo.AccessibilityAction.ACTION_SET_PROGRESS;
+    }
+
+    public static int getDrawingOrder(Object info) {
+        return ((AccessibilityNodeInfo) info).getDrawingOrder();
+    }
+
+    public static void setDrawingOrder(Object info, int drawingOrderInParent) {
+        ((AccessibilityNodeInfo) info).setDrawingOrder(drawingOrderInParent);
+    }
+
+    public static boolean isImportantForAccessibility(Object info) {
+        return ((AccessibilityNodeInfo) info).isImportantForAccessibility();
+    }
+
+    public static void setImportantForAccessibility(Object info, boolean importantForAccessibility) {
+        ((AccessibilityNodeInfo) info).setImportantForAccessibility(importantForAccessibility);
+    }
+}
